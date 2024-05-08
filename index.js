@@ -10,7 +10,7 @@ app.use(cors({ origin: "http://localhost:5173" }));
 // app.use(cors({ origin: "https://waterx.netlify.app" }));
 
 // Proxy endpoint to fetch data from ESP32 API
-app.get("/api/distance", async (req, res) => {
+app.get("/", async (req, res) => {
     console.log("Received request to /api/distance");
     try {
       const response = await axios.get("http://192.168.29.94/distance");
