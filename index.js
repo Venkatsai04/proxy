@@ -6,7 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // Configure CORS to allow your frontend's domain
-app.use(cors({ origin: "https://waterx.netlify.app" }));
+app.use(cors({ origin: "http://localhost:5173" }));
+// app.use(cors({ origin: "https://waterx.netlify.app" }));
 
 // Proxy endpoint to fetch data from ESP32 API
 app.get("/api/distance", async (req, res) => {
